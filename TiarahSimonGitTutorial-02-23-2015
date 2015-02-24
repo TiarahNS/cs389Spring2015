@@ -1,0 +1,174 @@
+Tiarah Simon
+CS 389
+Prof. Scharff
+
+Part 2
+Github is an open source distributed version control system that allows several different people to collaborate on a document at the same time.  You would use this platform when working in a team on a project or working on by yourself to publish your work.
+
+Part 3
+Press enter to submit commands
+ 
+> git init
+ 
+
+Initialized empty Git repository in /.git/
+
+Success!
+
+$ git status
+ 
+
+# On branch master
+#
+# Initial commit
+#
+nothing to commit (create/copy files and use "git add" to track)
+
+Success!
+
+$ 
+$ git status
+ 
+
+# On branch master
+#
+# Initial commit
+#
+# Untracked files:
+# (use "git add <file>..." to include in what will be committed)
+#
+# octocat.txt
+nothing added to commit but untracked files present (use "git add" to track)
+
+Success!
+
+$ git add octocat.txt
+ 
+
+
+Nice job, you've added octocat.txt to the Staging Area
+
+$ git status
+ 
+
+# On branch master
+#
+# Initial commit
+#
+# Changes to be committed:
+# (use "git rm --cached <file>..." to unstage)
+#
+# new file: octocat.txt
+#
+
+Success!
+
+$ git commit -m "Add cute octocat story"
+ 
+
+[master (root-commit) 20b5ccd] Add cute octocat story
+1 file changed, 1 insertion(+)
+create mode 100644 octocat.txt
+
+Success!
+
+$ git add '*.txt'
+ 
+
+
+Success!
+
+$ git status
+ 
+
+# On branch master
+# Changes to be committed:
+# (use "git reset HEAD <file>..." to unstage)
+#
+# new file: blue_octocat.txt
+# new file: octofamily/baby_octocat.txt
+# new file: octofamily/momma_octocat.txt
+# new file: red_octocat.txt
+#
+
+Did not use git commit
+
+$ git commit -m 'Add all the octocat txt files'
+ 
+
+[master 3852b4d] Add all the octocat txt files
+4 files changed, 4 insertions(+)
+create mode 100644 blue_octocat.txt
+create mode 100644 octofamily/baby_octocat.txt
+create mode 100644 octofamily/momma_octocat.txt
+create mode 100644 red_octocat.txt
+
+Success!
+
+$ git log
+ 
+
+commit 3852b4db1634463d0bb4d267edb7b3f9cd02ace1
+Author: Try Git <try_git@github.com>
+Date: Sat Oct 10 08:30:00 2020 -0500
+
+Add all the octocat txt files
+
+commit b652edfd888cd3d5e7fcb857d0dabc5a0fcb5e28
+Author: Try Git <try_git@github.com>
+Date: Sat Oct 10 08:30:00 2020 -0500
+
+Added cute octocat story
+
+Success!
+
+$ git remote add origin https://github.com/try-git/try_git.git
+ 
+
+
+Success!
+
+$ git push -u origin master
+ 
+
+Branch master set up to track remote branch master from origin.
+
+Success!
+
+$ git pull origin master
+ 
+
+Updating 3852b4d..3e70b0f
+Fast-forward
+yellow_octocat.txt | 1 +
+1 file changed, 1 insertion(+)
+create mode 100644 yellow_octocat.txt
+
+Success!
+
+$ git diff HEAD
+ 
+
+diff --git a/octocat.txt b/octocat.txt
+index 7d8d808..e725ef6 100644
+--- a/octocat.txt
++++ b/octocat.txt
+@@ -1 +1 @@
+-A Tale of Two Octocats
++[mA Tale of Two Octocats and an Octodog
+
+Success!
+
+$ git add octofamily/octodog.txt
+
+
+Part 4
+•	Repository – this is a directory initialized by Github where version controlling of files begins. 
+•	Commit – this is a snapshot of the repository showing all changes that have been made by all to the repository.
+•	Push – this command tells Git where to put your commits.
+•	Branch – this is a copy of the developer’s code where separate commits could be made when fixing bugs before merging back into the main branch.
+•	Fork – this is a copy of a repository that allows you to make changes without affecting the original.
+•	Merge – copying changes from the branch you’ve created to the master branch.
+•	Clone – this command copies a git repository.
+•	Pull – this command fetches new data from a remote repository and merges in into the current branch.
+•	Pull Request – this enables the project leader review changes and makes comments before merging in the changes.
